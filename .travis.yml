@@ -3,4 +3,7 @@ services:
   - docker
 
 script:
+  - docker build . -t tbsw
+  - docker run --rm -it -v $PWD/root-files:/root/workspace-test/root-files tbsw testbeam-luise.py
+  - ls root-files/ && stat root-files
   - docker ps -a
