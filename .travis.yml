@@ -3,7 +3,7 @@ services:
   - docker
 
 script:
-  - docker build . -t tbsw
+  - docker pull kuchosauronad0/tbsw
   - docker run --rm -it -v $PWD/workspace:/root/workspace-test/workspace kuchosauronad0/tbsw testbeam-luise.py
   - ls workspace/ && stat workspace
   - docker ps -a
