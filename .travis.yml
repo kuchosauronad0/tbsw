@@ -4,6 +4,6 @@ services:
 
 script:
   - docker build . -t tbsw
-  - docker run --rm -it -v $PWD/workspace:/root/workspace-test/workspace tbsw testbeam-luise.py
+  - docker run --rm -it -v $PWD/workspace:/root/workspace-test/workspace kuchosauronad0/tbsw testbeam-luise.py
   - ls workspace/ && stat workspace
   - docker ps -a
